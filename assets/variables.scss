@@ -1,0 +1,16 @@
+@import url('~/assets/fonts/fonts.css');
+$color-pack: false;
+$secondary: #D84315;
+$dark: #3E2723;
+
+$sm: 640px;
+$md: 960px;
+$lg: 1264px;
+$xl: 1902px;
+
+.pointer{
+    cursor: pointer;
+}
+*{
+    word-break: normal !important;
+}
