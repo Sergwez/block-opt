@@ -45,7 +45,7 @@ app.post('/send-lead', (req, res) => {
     Телефон: ${req.body.msg.phone},
     Отправлено с ${req.body.msg.sendFrom}`;
 
-  bot.sendMessage('-518265423', msg);
+  bot.sendMessage(process.env.TELEGRAM_GROUP_ID, msg);
   return res.send('Сообщение отправлено!');
 });
 
