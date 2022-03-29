@@ -37,7 +37,7 @@ app.post('/delete-file', (req, res) => {
 });
 
 // отправка заявки в телеграм
-const bot = new TeleBot('5140238685:AAESy4-uBZE5Ohqo6jvavoHR0NnunKfrjLE');
+const bot = new TeleBot('5128697971:AAHmefIY2EngxJYYaqMRilroQqr5L4pQLqI');
 app.post('/send-lead', (req, res) => {
   const msg = `
     Новая заявка
@@ -45,7 +45,7 @@ app.post('/send-lead', (req, res) => {
     Телефон: ${req.body.msg.phone},
     Отправлено с ${req.body.msg.sendFrom}`;
 
-  bot.sendMessage('-781915192', msg);
+  bot.sendMessage('-518265423', msg);
   return res.send('Сообщение отправлено!');
 });
 
