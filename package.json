@@ -44,5 +44,8 @@
   "main": "nuxt.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "v12.13.0"
+  }
 }

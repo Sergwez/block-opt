@@ -16,7 +16,7 @@ export default {
     ],
   },
   env: {
-    baseUrl: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://vast-scrubland-43083.herokuapp.com',
+    baseUrl: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://block-opt.herokuapp.com/',
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,12 +46,12 @@ export default {
   firebase: {
     lazy: true,
     config: {
-      apiKey: 'AIzaSyABrku0bFCFoFlJZQDiDCt3mkj0nC7LLVE',
-      authDomain: ['block-opt.firebaseapp.com', 'localhost'],
-      projectId: 'block-opt',
-      storageBucket: 'block-opt.appspot.com',
-      messagingSenderId: '647660254772',
-      appId: '1:647660254772:web:0eced5bc454a43fa49fc61',
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      storageBucket: process.env.FIREBASE_STAGE_BACKET,
+      messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+      appId: process.env.FIREBASE_APP_ID,
     },
 
     services: {
