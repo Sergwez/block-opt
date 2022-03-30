@@ -49,7 +49,12 @@ export default async (context, inject) => {
     // получение следующего id для коллекции
     async nextId() {
       const docs = await this.getDocs();
-      return docs.reduce((acc, curr) => (acc.id > curr.id ? acc : curr)).id + 1;
+      console.log(docs);
+      if (docs && docs.length !== 0) {
+        return docs.reduce((acc, curr) => (acc.id > curr.id ? acc : curr)).id + 1;
+      }
+      console.log(false);
+      return 0;
     }
 
     // создание нового документа

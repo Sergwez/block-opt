@@ -21,7 +21,9 @@ export const getters = {
   },
   targetNames(state) {
     const arr = [];
-    state.targets.forEach((elem) => arr.push(elem.name));
+    if (state.targets.length) {
+      state.targets.forEach((elem) => arr.push(elem.name));
+    }
     return arr;
   },
   name: (state) => (id) => {

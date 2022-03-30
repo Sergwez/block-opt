@@ -60,13 +60,16 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+      <ResetDB />
     </v-navigation-drawer>
   </div>
 </template>
 <script>
 import { mdiChevronRight, mdiMenu } from '@mdi/js';
+import ResetDB from '~/components/admin/ResetDB.vue';
 
 export default {
+  components: { ResetDB },
   data() {
     return {
       drawer: false,

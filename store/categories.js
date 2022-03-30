@@ -24,7 +24,9 @@ export const getters = {
   },
   categoryNames(state) {
     const arr = [];
-    state.categories.forEach((elem) => arr.push(elem.name));
+    if (state.categories.length) {
+      state.categories.forEach((elem) => arr.push(elem.name));
+    }
     return arr;
   },
   name: (state) => (id) => {

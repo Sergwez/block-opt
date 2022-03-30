@@ -91,20 +91,22 @@ export default {
   computed: {
     products() {
       const products = [];
-      this.$store.getters['products/allProducts'].forEach((elem) => {
-        const obj = {};
-        Object.assign(obj, elem);
-        if (this.$store.getters['vendors/allVendors'].length !== 0) {
-          obj.vendor = this.$store.getters['vendors/allVendors'].filter((vendor) => vendor.id === elem.vendor)[0].name;
-        }
-        if (this.$store.getters['categories/allCategories'].length !== 0) {
-          obj.category = this.$store.getters['categories/allCategories'].filter((category) => category.id === elem.category)[0].name;
-        }
-        if (this.$store.getters['targets/allTargets'].length !== 0) {
-          obj.target = this.$store.getters['targets/allTargets'].filter((target) => target.id === elem.target)[0].name;
-        }
-        products.push(obj);
-      });
+      if (this.$store.getters['products/allProducts'].length) {
+        this.$store.getters['products/allProducts'].forEach((elem) => {
+          const obj = {};
+          Object.assign(obj, elem);
+          if (this.$store.getters['vendors/allVendors'] && this.$store.getters['vendors/allVendors'].length !== 0) {
+            obj.vendor = this.$store.getters['vendors/allVendors'].filter((vendor) => vendor.id === elem.vendor)[0].name;
+          }
+          if (this.$store.getters['categories/allCategories'].length !== 0) {
+            obj.category = this.$store.getters['categories/allCategories'].filter((category) => category.id === elem.category)[0].name;
+          }
+          if (this.$store.getters['targets/allTargets'] && this.$store.getters['targets/allTargets'].length !== 0) {
+            obj.target = this.$store.getters['targets/allTargets'].filter((target) => target.id === elem.target)[0].name;
+          }
+          products.push(obj);
+        });
+      }
       return products;
     },
   },
