@@ -126,18 +126,19 @@ export default {
       return products;
     },
   },
-  mounted() {
-    this.getVendorsSnapshot();
-    this.getCategoriesSnapshot();
-    this.getTargetsSnapshot();
-    this.getProductsSnapshot();
+  async mounted() {
+    await this.$fire.firestoreReady();
+    this.getVendors();
+    this.getCategories();
+    this.getTargets();
+    this.getProducts();
   },
   methods: {
     ...mapActions({
-      getProductsSnapshot: 'products/getProductsSnapshot',
-      getVendorsSnapshot: 'vendors/getVendorsSnapshot',
-      getCategoriesSnapshot: 'categories/getCategoriesSnapshot',
-      getTargetsSnapshot: 'targets/getTargetsSnapshot',
+      getProducts: 'products/getProducts',
+      getVendors: 'vendors/getVendors',
+      getCategories: 'categories/getCategories',
+      getTargets: 'targets/getTargets',
     }),
     ...mapMutations({ categoryProducts: 'products/categoryProducts' }),
   },

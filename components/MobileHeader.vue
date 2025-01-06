@@ -18,7 +18,7 @@
       <Logo />
       <a
         class="text-decoration-none"
-        :href="'https://api.whatsapp.com/send?phone=' + $info.phone"
+        :href="'https://wa.me/79260850007'"
       >
         <v-icon
           large
@@ -50,7 +50,7 @@
               Телефон для заказа:
             </v-list-item-title>
             <v-list-item-subtitle>
-              +7 995 449 70 07
+              +7 926 085 00 07
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>

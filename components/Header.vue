@@ -13,7 +13,7 @@
       <div class="pl-5 header__info">
         Телефон для заказа:
         <span class="mt-2">
-          +7 995 449 70 07
+          +7 926 085 00 07
         </span>
       </div>
 

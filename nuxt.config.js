@@ -16,7 +16,7 @@ export default {
     ],
   },
   env: {
-    baseUrl: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://block-opt.herokuapp.com/',
+    baseUrl: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://block-opt.ru/',
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -42,7 +42,25 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
     '@nuxtjs/firebase',
+    ['@rkaliev/nuxtjs-yandex-metrika',
+      {
+        id: '91750091',
+        webvisor: true,
+        clickmap: true,
+        debug: true,
+        noJS: false,
+        disabled: false,
+      },
+    ],
   ],
+  nuxtjsYandexMetrika: {
+    id: '91750091',
+    webvisor: true,
+    clickmap: true,
+    debug: true,
+    noJS: false,
+    disabled: false,
+  },
   firebase: {
     lazy: true,
     config: {

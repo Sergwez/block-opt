@@ -101,6 +101,7 @@ export default {
             context.sending = false;
             context.btnText = 'Отправлено';
             context.$refs.form.reset();
+            context.$yandexMetrika.reachGoal('my-goal');
             setTimeout(() => {
               context.sent = false;
               context.btnText = context.btntext || 'Обратный звонок';

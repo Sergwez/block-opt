@@ -50,8 +50,8 @@ export default {
       }
     },
   },
-  mounted() {
-    this.$fire.firestoreReady();
+  async mounted() {
+    await this.$fire.firestoreReady();
     if (!this.$route.query.docs) {
       this.$router.push({ path: 'admin', query: { docs: 'products' } });
     }

@@ -129,22 +129,23 @@ export default {
       return unicSize;
     },
   },
-  mounted() {
-    this.getProductsSnapshot();
-    this.getVendorsSnapshot();
-    this.getCategoriesSnapshot();
-    this.getTargetsSnapshot();
+  async mounted() {
+    await this.$fire.firestoreReady();
+    this.getProducts();
+    this.getVendors();
+    this.getCategories();
+    this.getTargets();
   },
   methods: {
     ...mapActions({
-      getProductsSnapshot: 'products/getProductsSnapshot',
-      getVendorsSnapshot: 'vendors/getVendorsSnapshot',
-      getCategoriesSnapshot: 'categories/getCategoriesSnapshot',
-      getTargetsSnapshot: 'targets/getTargetsSnapshot',
+      getProducts: 'products/getProducts',
+      getVendors: 'vendors/getVendors',
+      getCategories: 'categories/getCategories',
+      getTargets: 'targets/getTargets',
     }),
     ...mapMutations({ filterProducts: 'products/filterProducts' }),
     async changeFilter() {
-      await this.getProductsSnapshot();
+      await this.getProducts();
       this.filterProducts(this.filter);
       let counter = 0;
       Object.keys(this.filter).forEach((element) => {

@@ -43,6 +43,7 @@ app.post('/send-lead', (req, res) => {
     Новая заявка
     Имя: ${req.body.msg.name},
     Телефон: ${req.body.msg.phone},
+    test: ${process.env.TELEGRAM_BOT_ID},
     Отправлено с ${req.body.msg.sendFrom}`;
 
   bot.sendMessage(process.env.TELEGRAM_GROUP_ID, msg);

@@ -2,13 +2,13 @@
   <div class="first-screen">
     <div class="first-screen__container">
       <div class="first-screen__left">
-        <h1>Газосиликатные блоки и кирпичи оптом</h1>
+        <h1>Газобетонные блоки и кирпичи оптом</h1>
         <div class=" first-screen__list">
           <div class="text-subtitle-1 first-screen__list-item">
             <v-icon color="secondary">
               {{ mdiCheck }}
             </v-icon>
-            Сотрудничаем с 10-ю заводами
+            Дилеры 10-и заводов
           </div>
           <div class="text-subtitle-1 first-screen__list-item">
             <v-icon color="secondary">

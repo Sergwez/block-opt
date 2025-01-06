@@ -1,5 +1,6 @@
 export const actions = {
   async getProducts(ctx) {
+    console.log(this.$Collection('products'));
     ctx.commit('updateProducts', await this.$Collection('products').getDocs());
     ctx.commit('updateLoad', true);
   },

@@ -15,7 +15,7 @@
             {{ mdiCheck }}
           </v-icon>
           Связаться через
-          <a :href="'https://api.whatsapp.com/send?phone=' + $info.phone">ватсап</a>
+          <a :href="'https://wa.me/79260850007'">ватсап</a>
           или
           другие мессенджеры
         </div>

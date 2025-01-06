@@ -20,9 +20,9 @@
 */
 
 export default async (context, inject) => {
-  if (context.route.path === '/login') {
-    context.$fire.firestoreReady();
-  }
+  // if (context.route.path === '/login') {
+  context.$fire.firestoreReady();
+  // }
 
   class Collection {
     constructor(docName) {
